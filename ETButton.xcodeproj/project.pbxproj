@@ -11,16 +11,20 @@
 		5275D7BE2126BB3C00738282 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5275D7BD2126BB3C00738282 /* Assets.xcassets */; };
 		5275D7C12126BB3C00738282 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5275D7BF2126BB3C00738282 /* LaunchScreen.storyboard */; };
 		5275D7C72126BB9E00738282 /* BasicButtonsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5275D7C62126BB9E00738282 /* BasicButtonsVC.swift */; };
-		5275D7CC2126C59F00738282 /* Button+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5275D7CA2126C4C500738282 /* Button+Styles.swift */; };
-		5275D7CD2126C59F00738282 /* Button+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5275D7CA2126C4C500738282 /* Button+Styles.swift */; };
-		5275D7CE2126C5A000738282 /* Button+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5275D7CA2126C4C500738282 /* Button+Styles.swift */; };
-		5275D7CF2126C5A000738282 /* Button+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5275D7CA2126C4C500738282 /* Button+Styles.swift */; };
+		5275D7CC2126C59F00738282 /* Button+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5275D7CA2126C4C500738282 /* Button+Style.swift */; };
+		5275D7CD2126C59F00738282 /* Button+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5275D7CA2126C4C500738282 /* Button+Style.swift */; };
+		5275D7CE2126C5A000738282 /* Button+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5275D7CA2126C4C500738282 /* Button+Style.swift */; };
+		5275D7CF2126C5A000738282 /* Button+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5275D7CA2126C4C500738282 /* Button+Style.swift */; };
 		5275D7D22126D03700738282 /* ETButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6D97C1BEFF229002C0205 /* ETButton.framework */; };
 		5275D7D32126D03700738282 /* ETButton.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6D97C1BEFF229002C0205 /* ETButton.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5275D7D92126D5DA00738282 /* Button+StyleSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5275D7D72126D57200738282 /* Button+StyleSetup.swift */; };
 		5275D7DA2126D5DA00738282 /* Button+StyleSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5275D7D72126D57200738282 /* Button+StyleSetup.swift */; };
 		5275D7DB2126D5DB00738282 /* Button+StyleSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5275D7D72126D57200738282 /* Button+StyleSetup.swift */; };
 		5275D7DC2126D5DC00738282 /* Button+StyleSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5275D7D72126D57200738282 /* Button+StyleSetup.swift */; };
+		5275D7DE2126F3BC00738282 /* Button+State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5275D7DD2126F3BC00738282 /* Button+State.swift */; };
+		5275D7DF2126F3BC00738282 /* Button+State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5275D7DD2126F3BC00738282 /* Button+State.swift */; };
+		5275D7E02126F3BC00738282 /* Button+State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5275D7DD2126F3BC00738282 /* Button+State.swift */; };
+		5275D7E12126F3BC00738282 /* Button+State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5275D7DD2126F3BC00738282 /* Button+State.swift */; };
 		52D6D9871BEFF229002C0205 /* ETButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6D97C1BEFF229002C0205 /* ETButton.framework */; };
 		8933C7851EB5B820000D00A4 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7841EB5B820000D00A4 /* Button.swift */; };
 		8933C7861EB5B820000D00A4 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7841EB5B820000D00A4 /* Button.swift */; };
@@ -85,8 +89,9 @@
 		5275D7C02126BB3C00738282 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5275D7C22126BB3C00738282 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5275D7C62126BB9E00738282 /* BasicButtonsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicButtonsVC.swift; sourceTree = "<group>"; };
-		5275D7CA2126C4C500738282 /* Button+Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+Styles.swift"; sourceTree = "<group>"; };
+		5275D7CA2126C4C500738282 /* Button+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+Style.swift"; sourceTree = "<group>"; };
 		5275D7D72126D57200738282 /* Button+StyleSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+StyleSetup.swift"; sourceTree = "<group>"; };
+		5275D7DD2126F3BC00738282 /* Button+State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+State.swift"; sourceTree = "<group>"; };
 		52D6D97C1BEFF229002C0205 /* ETButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ETButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D6D9861BEFF229002C0205 /* ETButton-iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ETButton-iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D6D9E21BEFFF6E002C0205 /* ETButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ETButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -223,8 +228,9 @@
 			isa = PBXGroup;
 			children = (
 				8933C7841EB5B820000D00A4 /* Button.swift */,
-				5275D7CA2126C4C500738282 /* Button+Styles.swift */,
+				5275D7CA2126C4C500738282 /* Button+Style.swift */,
 				5275D7D72126D57200738282 /* Button+StyleSetup.swift */,
+				5275D7DD2126F3BC00738282 /* Button+State.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -612,7 +618,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5275D7CC2126C59F00738282 /* Button+Styles.swift in Sources */,
+				5275D7CC2126C59F00738282 /* Button+Style.swift in Sources */,
+				5275D7DE2126F3BC00738282 /* Button+State.swift in Sources */,
 				8933C7851EB5B820000D00A4 /* Button.swift in Sources */,
 				5275D7D92126D5DA00738282 /* Button+StyleSetup.swift in Sources */,
 			);
@@ -630,7 +637,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5275D7CE2126C5A000738282 /* Button+Styles.swift in Sources */,
+				5275D7CE2126C5A000738282 /* Button+Style.swift in Sources */,
+				5275D7E02126F3BC00738282 /* Button+State.swift in Sources */,
 				8933C7871EB5B820000D00A4 /* Button.swift in Sources */,
 				5275D7DB2126D5DB00738282 /* Button+StyleSetup.swift in Sources */,
 			);
@@ -640,7 +648,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5275D7CF2126C5A000738282 /* Button+Styles.swift in Sources */,
+				5275D7CF2126C5A000738282 /* Button+Style.swift in Sources */,
+				5275D7E12126F3BC00738282 /* Button+State.swift in Sources */,
 				8933C7881EB5B820000D00A4 /* Button.swift in Sources */,
 				5275D7DC2126D5DC00738282 /* Button+StyleSetup.swift in Sources */,
 			);
@@ -650,7 +659,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5275D7CD2126C59F00738282 /* Button+Styles.swift in Sources */,
+				5275D7CD2126C59F00738282 /* Button+Style.swift in Sources */,
+				5275D7DF2126F3BC00738282 /* Button+State.swift in Sources */,
 				8933C7861EB5B820000D00A4 /* Button.swift in Sources */,
 				5275D7DA2126D5DA00738282 /* Button+StyleSetup.swift in Sources */,
 			);

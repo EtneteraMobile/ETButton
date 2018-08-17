@@ -11,10 +11,15 @@ import ETButton
 
 class BasicButtonsVC: UIViewController {
 
-
-    static let backgroundColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1)
-    static let highlightedBackgroundColor = UIColor(red: 0.7, green: 0.7, blue: 0.7, alpha: 1)
+    static let backgroundColor = UIColor(red: 0.133, green: 0.407, blue: 0.121, alpha: 1)
+    static let highlightedBackgroundColor = UIColor(red: 0.133 - 0.1, green: 0.407 - 0.1, blue: 0.121 - 0.1, alpha: 1)
+    static let selectedBackgroundColor = UIColor(red: 0.7, green: 1, blue: 0.7, alpha: 1)
     static let disabledBackgroundColor = UIColor(red: 0.4, green: 0.4, blue: 0.4, alpha: 1)
+
+    static let foregroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+    static let highlightedForegroundColor = UIColor(red: 0.5, green: 0, blue: 0, alpha: 1)
+    static let selectedForegroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+    static let disabledForegroundColor = UIColor(red: 0.1, green: 0.1, blue: 0.1, alpha: 1)
 
     let noneButton = Button()
     let noneButtonStyle = Button.Style.none
@@ -22,8 +27,19 @@ class BasicButtonsVC: UIViewController {
     let normalButton = Button()
     let normalButtonStyle = Button.Style.basic
 
-    let backgroundButton = Button()
-    let backgroundButtonStyle = Button.Style(backgroundColor: BasicButtonsVC.backgroundColor, backgroundHighlightedColor: highlightedBackgroundColor)
+    let stateButton = Button()
+    let stateButtonStyle = Button.Style(backgroundColor: BasicButtonsVC.backgroundColor,
+                                        backgroundHighlightedColor: highlightedBackgroundColor,
+                                        backgroundSelectedColor: selectedBackgroundColor,
+                                        backgroundDisabledColor: disabledBackgroundColor,
+                                        titleStyle: Button.LabelStyle(textColor: foregroundColor, font: UIFont.boldSystemFont(ofSize: 14)),
+                                        titleHighlightedStyle: Button.LabelStyle(textColor: highlightedForegroundColor),
+                                        titleSelectedStyle: Button.LabelStyle(textColor: selectedForegroundColor),
+                                        titleDisabledStyle: Button.LabelStyle(textColor: disabledForegroundColor))
+
+    let selectedButton = Button()
+    let disabledButton = Button()
+    let highlightedButton = Button()
 
     let buttonsView = UIStackView()
 
@@ -58,7 +74,7 @@ class BasicButtonsVC: UIViewController {
         footerView.translatesAutoresizingMaskIntoConstraints = false
         footerView.backgroundColor = .green
 
-        let buttons = [noneButton, normalButton, backgroundButton]
+        let buttons = [noneButton, normalButton, stateButton, highlightedButton, selectedButton, disabledButton]
         buttons.forEach {
             buttonsView.addArrangedSubview($0)
             $0.translatesAutoresizingMaskIntoConstraints = false
@@ -73,11 +89,22 @@ class BasicButtonsVC: UIViewController {
 
         noneButton.style = noneButtonStyle
         normalButton.style = normalButtonStyle
-        backgroundButton.style = backgroundButtonStyle
+        stateButton.style = stateButtonStyle
+        highlightedButton.style = stateButtonStyle
+        selectedButton.style = stateButtonStyle
+        disabledButton.style = stateButtonStyle
+
+        highlightedButton.isHighlighted = true
+        highlightedButton.isUserInteractionEnabled = false
+        selectedButton.isSelected = true
+        disabledButton.isEnabled = false
 
         noneButton.setTitle("None Button", for: .normal)
         normalButton.setTitle("Normal Button", for: .normal)
-        backgroundButton.setTitle("Background Button", for: .normal)
+        stateButton.setTitle("STATE BUTTON", for: .normal)
+        highlightedButton.setTitle("highlighted Button", for: .normal)
+        selectedButton.setTitle("Selected Button", for: .normal)
+        disabledButton.setTitle("Disabled Button", for: .normal)
     }
 
 }

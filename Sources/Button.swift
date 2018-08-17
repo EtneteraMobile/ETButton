@@ -8,15 +8,17 @@
 
 import UIKit
 
-public class Button: UIButton {
+open class Button: UIButton {
 
     /// Button style
-    internal var currentStyle: Style
+    var currentStyle: Style
     public var style: Style {
         didSet {
             updateStyle()
         }
     }
+
+    var customTintColor: UIColor?
 
     // MARK: - Initialization
 
@@ -34,9 +36,35 @@ public class Button: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
 
+    // MARK: - Overrides
     // MARK: Actions
 
     @objc func buttonAction() {
         print("\(#function)")
+    }
+
+    open override var tintColor: UIColor! {
+        didSet {
+            customTintColor = tintColor
+            self.layer.borderColor = tintColor.cgColor
+        }
+    }
+
+    open override var isHighlighted: Bool {
+        didSet {
+            updateStateStyle()
+        }
+    }
+
+    open override var isSelected: Bool {
+        didSet {
+            updateStateStyle()
+        }
+    }
+
+    open override var isEnabled: Bool {
+        didSet {
+            updateStateStyle()
+        }
     }
 }

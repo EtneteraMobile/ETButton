@@ -42,6 +42,7 @@ public enum IconImagePosition: Int {
 }
 
 public extension Button {
+
     // MARK: - Styles
     // MARK: Text
     public struct LabelStyle: Equatable {
@@ -58,25 +59,29 @@ public extension Button {
     public struct Style {
 
         public static let none = Style()
-        public static let basic = Style()
+        public static let basic = Style(backgroundHighlightedColor: .lightGray)
 
         // Background
         let backgroundColor: UIColor
         let backgroundHighlightedColor: UIColor?
+        let backgroundSelectedColor: UIColor?
         let backgroundDisabledColor: UIColor?
 
         let backgroundView: UIView?
         let backgroundHighlightedView: UIView?
+        let backgroundSelectedView: UIView?
         let backgroundDisabledView: UIView?
 
         // Title
         let titleStyle: LabelStyle
         let titleHighlightedStyle: LabelStyle?
+        let titleSelectedStyle: LabelStyle?
         let titleDisabledStyle: LabelStyle?
 
         // Subtitle
         let subtitleStyle: LabelStyle?
         let subtitleHighlightedStyle: LabelStyle?
+        let subtitleSelectedStyle: LabelStyle?
         let subtitleDisabledStyle: LabelStyle?
 
         // Borders
@@ -90,17 +95,21 @@ public extension Button {
         let cornerRadius: (Corner, CGFloat)? // Radius for all specified borders
         let cornerRadiuses: [(Corner, CGFloat)]? // Separate radius for each border
 
-        public init(backgroundColor: UIColor = .white,
+        public init(backgroundColor: UIColor = .clear,
                     backgroundHighlightedColor: UIColor? = nil,
+                    backgroundSelectedColor: UIColor? = nil,
                     backgroundDisabledColor: UIColor? = nil,
                     backgroundView: UIView? = nil,
                     backgroundHighlightedView: UIView? = nil,
+                    backgroundSelectedView: UIView? = nil,
                     backgroundDisabledView: UIView? = nil,
                     titleStyle: LabelStyle = LabelStyle(),
                     titleHighlightedStyle: LabelStyle? = nil,
+                    titleSelectedStyle: LabelStyle? = nil,
                     titleDisabledStyle: LabelStyle? = nil,
                     subtitleStyle: LabelStyle? = nil,
                     subtitleHighlightedStyle: LabelStyle? = nil,
+                    subtitleSelectedStyle: LabelStyle? = nil,
                     subtitleDisabledStyle: LabelStyle? = nil,
                     borderWidth: (Edge, CGFloat)? = nil,
                     borderWidths: [(Edge, CGFloat)]? = nil,
@@ -111,15 +120,19 @@ public extension Button {
 
             self.backgroundColor = backgroundColor
             self.backgroundHighlightedColor = backgroundHighlightedColor
+            self.backgroundSelectedColor = backgroundSelectedColor
             self.backgroundDisabledColor = backgroundDisabledColor
             self.backgroundView = backgroundView
             self.backgroundHighlightedView = backgroundHighlightedView
+            self.backgroundSelectedView = backgroundSelectedView
             self.backgroundDisabledView = backgroundDisabledView
             self.titleStyle = titleStyle
             self.titleHighlightedStyle = titleHighlightedStyle
+            self.titleSelectedStyle = titleSelectedStyle
             self.titleDisabledStyle = titleDisabledStyle
             self.subtitleStyle = subtitleStyle
             self.subtitleHighlightedStyle = subtitleHighlightedStyle
+            self.subtitleSelectedStyle = subtitleSelectedStyle
             self.subtitleDisabledStyle = subtitleDisabledStyle
             self.borderWidth = borderWidth
             self.borderWidths = borderWidths

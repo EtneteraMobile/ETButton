@@ -16,9 +16,11 @@ extension Button {
 
         if s.backgroundColor != cs.backgroundColor { updateBackgroundColor() }
         if s.backgroundHighlightedColor != cs.backgroundHighlightedColor { updateBackgroundHighlightedColor() }
+        if s.backgroundSelectedColor != cs.backgroundSelectedColor { updateBackgroundSelectedColor() }
         if s.backgroundDisabledColor != cs.backgroundDisabledColor { updateBackgroundDisabledColor() }
         if s.backgroundView != cs.backgroundView { updateBackgroundView() }
         if s.backgroundHighlightedView != cs.backgroundHighlightedView { updateBackgroundHighlightedView() }
+        if s.backgroundSelectedView != cs.backgroundSelectedView { updateBackgroundSelectedView() }
         if s.backgroundDisabledView != cs.backgroundDisabledView { updateBackgroundDisabledView() }
         if s.titleStyle != cs.titleStyle { updateTitleStyle() }
         if s.titleHighlightedStyle != cs.titleHighlightedStyle { updateTitleHighlightedStyle() }
@@ -38,17 +40,24 @@ extension Button {
     }
 
     func reloadStyle() {
-        updateBackgroundColor()
-        updateBackgroundHighlightedColor()
-        updateBackgroundDisabledColor()
-        updateBackgroundView()
-        updateBackgroundHighlightedView()
-        updateBackgroundDisabledView()
+//        updateBackgroundColor()
+//        updateBackgroundHighlightedColor()
+//        updateBackgroundHighlightedColor()
+//        updateBackgroundDisabledColor()
+//        updateBackgroundView()
+//        updateBackgroundHighlightedView()
+//        updateBackgroundSelectedView()
+//        updateBackgroundDisabledView()
+
+        updateStateStyle()
+
         updateTitleStyle()
         updateTitleHighlightedStyle()
+        updateTitleSelectedStyle()
         updateTitleDisabledStyle()
         updateSubtitleStyle()
         updateSubtitleHighlightedStyle()
+        updateSubtitleSelectedStyle()
         updateSubtitleDisabledStyle()
         updateBorderWidth()
         updateBorderWidths()
@@ -59,60 +68,67 @@ extension Button {
     }
 
     func updateBackgroundColor() {
-        backgroundColor = style.backgroundColor
+        updateStateStyle()
     }
 
     func updateBackgroundHighlightedColor() {
-        // Not implemented
+        updateStateStyle()
+    }
+
+    func updateBackgroundSelectedColor() {
+        updateStateStyle()
     }
 
     func updateBackgroundDisabledColor() {
-        // Not implemented
+        updateStateStyle()
     }
 
     func updateBackgroundView() {
-        // Not implemented
+        updateStateStyle()
     }
 
     func updateBackgroundHighlightedView() {
-        // Not implemented
+        updateStateStyle()
+    }
+
+    func updateBackgroundSelectedView() {
+        updateStateStyle()
     }
 
     func updateBackgroundDisabledView() {
-        // Not implemented
+        updateStateStyle()
     }
 
     func updateTitleStyle() {
-        setTitleColor(style.titleStyle.textColor, for: .normal)
-        titleLabel?.font = style.titleStyle.font
+        updateStateStyle()
     }
 
     func updateTitleHighlightedStyle() {
-        if let textStyle = style.titleHighlightedStyle {
-            setTitleColor(textStyle.textColor, for: .highlighted)
-        } else {
-            setTitleColor(style.titleStyle.textColor, for: .highlighted)
-        }
+        updateStateStyle()
+    }
+
+    func updateTitleSelectedStyle() {
+        updateStateStyle()
     }
 
     func updateTitleDisabledStyle() {
-        if let textStyle = style.titleDisabledStyle {
-            setTitleColor(textStyle.textColor, for: .disabled)
-        } else {
-            setTitleColor(style.titleStyle.textColor, for: .disabled)
-        }
+        updateStateStyle()
     }
 
     func updateSubtitleStyle() {
-        // Not implemented
+        updateStateStyle()
     }
 
     func updateSubtitleHighlightedStyle() {
-        // Not implemented
+        updateStateStyle()
+    }
+
+    func updateSubtitleSelectedStyle() {
+        updateStateStyle()
     }
 
     func updateSubtitleDisabledStyle() {
-        // Not implemented
+        updateStateStyle()
     }
 
     func updateBorderWidth() {
