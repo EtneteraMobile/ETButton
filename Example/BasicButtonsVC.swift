@@ -1,5 +1,5 @@
 //
-//  BasicButtonsViewController.swift
+//  BasicButtonsVC.swift
 //  Example
 //
 //  Created by Jiří Zoudun on 17/08/2018.
@@ -106,5 +106,4 @@ class BasicButtonsVC: UIViewController {
         selectedButton.setTitle("Selected Button", for: .normal)
         disabledButton.setTitle("Disabled Button", for: .normal)
     }
-
 }

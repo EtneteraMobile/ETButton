@@ -38,7 +38,12 @@ public struct Corner: OptionSet, Equatable {
 
 // TODO: Spacing with asociated values?
 public enum IconImagePosition: Int {
-    case normal, relativeLeft, fixedLeft, relativeRight, fixedRight, bellowLabel, aboveLabel
+    case relativeLeft
+    case fixedLeft // DOCU: Doesn't respect image and title insets - use relativeLeft
+    case relativeRight // DOCU: Doesn't respect image and title insets - use relativeLeft
+    case fixedRight // DOCU: Doesn't respect image and title insets - use relativeLeft
+    case bellowLabel
+    case aboveLabel
 }
 
 public extension Button {
@@ -48,10 +53,12 @@ public extension Button {
     public struct LabelStyle: Equatable {
         let textColor: UIColor
         let font: UIFont
+        let lineBreakMode: NSLineBreakMode
 
-        public init(textColor: UIColor = .blue, font: UIFont = UIFont.systemFont(ofSize: UIFont.buttonFontSize)) {
+        public init(textColor: UIColor = .blue, font: UIFont = UIFont.systemFont(ofSize: UIFont.buttonFontSize), lineBreakMode: NSLineBreakMode = .byTruncatingTail) {
             self.textColor = textColor
             self.font = font
+            self.lineBreakMode = lineBreakMode
         }
     }
 
@@ -77,6 +84,12 @@ public extension Button {
         let titleHighlightedStyle: LabelStyle?
         let titleSelectedStyle: LabelStyle?
         let titleDisabledStyle: LabelStyle?
+
+        // Icon
+        let iconImagePosition: IconImagePosition
+
+        // Spacing
+        let textIconOffset: CGFloat
 
         // Subtitle
         let subtitleStyle: LabelStyle?
@@ -107,6 +120,8 @@ public extension Button {
                     titleHighlightedStyle: LabelStyle? = nil,
                     titleSelectedStyle: LabelStyle? = nil,
                     titleDisabledStyle: LabelStyle? = nil,
+                    iconImagePosition: IconImagePosition = .relativeLeft,
+                    textIconOffset: CGFloat = CGFloat.nan,
                     subtitleStyle: LabelStyle? = nil,
                     subtitleHighlightedStyle: LabelStyle? = nil,
                     subtitleSelectedStyle: LabelStyle? = nil,
@@ -130,6 +145,8 @@ public extension Button {
             self.titleHighlightedStyle = titleHighlightedStyle
             self.titleSelectedStyle = titleSelectedStyle
             self.titleDisabledStyle = titleDisabledStyle
+            self.iconImagePosition = iconImagePosition
+            self.textIconOffset = textIconOffset
             self.subtitleStyle = subtitleStyle
             self.subtitleHighlightedStyle = subtitleHighlightedStyle
             self.subtitleSelectedStyle = subtitleSelectedStyle

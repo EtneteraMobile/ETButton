@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		5217271121270A8100DED7A1 /* FBSnapshotTestCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5217271021270A8100DED7A1 /* FBSnapshotTestCase.framework */; };
 		521727132127104B00DED7A1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521727122127104B00DED7A1 /* Constants.swift */; };
+		52172715212718D200DED7A1 /* ImageButtonsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52172714212718D200DED7A1 /* ImageButtonsVC.swift */; };
+		5217271721271B7B00DED7A1 /* Button+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5217271621271B7B00DED7A1 /* Button+Layout.swift */; };
+		5217271821271B7B00DED7A1 /* Button+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5217271621271B7B00DED7A1 /* Button+Layout.swift */; };
+		5217271921271B7B00DED7A1 /* Button+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5217271621271B7B00DED7A1 /* Button+Layout.swift */; };
+		5217271A21271B7B00DED7A1 /* Button+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5217271621271B7B00DED7A1 /* Button+Layout.swift */; };
 		5275D7BC2126BB3B00738282 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5275D7BB2126BB3B00738282 /* AppDelegate.swift */; };
 		5275D7BE2126BB3C00738282 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5275D7BD2126BB3C00738282 /* Assets.xcassets */; };
 		5275D7C12126BB3C00738282 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5275D7BF2126BB3C00738282 /* LaunchScreen.storyboard */; };
@@ -87,6 +92,8 @@
 /* Begin PBXFileReference section */
 		5217271021270A8100DED7A1 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSnapshotTestCase.framework; path = Carthage/Build/iOS/FBSnapshotTestCase.framework; sourceTree = "<group>"; };
 		521727122127104B00DED7A1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		52172714212718D200DED7A1 /* ImageButtonsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageButtonsVC.swift; sourceTree = "<group>"; };
+		5217271621271B7B00DED7A1 /* Button+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+Layout.swift"; sourceTree = "<group>"; };
 		5275D7B92126BB3B00738282 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5275D7BB2126BB3B00738282 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5275D7BD2126BB3C00738282 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -179,6 +186,7 @@
 			children = (
 				5275D7BB2126BB3B00738282 /* AppDelegate.swift */,
 				5275D7C62126BB9E00738282 /* BasicButtonsVC.swift */,
+				52172714212718D200DED7A1 /* ImageButtonsVC.swift */,
 				5275D7BD2126BB3C00738282 /* Assets.xcassets */,
 				5275D7BF2126BB3C00738282 /* LaunchScreen.storyboard */,
 				5275D7C22126BB3C00738282 /* Info.plist */,
@@ -237,6 +245,7 @@
 				5275D7CA2126C4C500738282 /* Button+Style.swift */,
 				5275D7D72126D57200738282 /* Button+StyleSetup.swift */,
 				5275D7DD2126F3BC00738282 /* Button+State.swift */,
+				5217271621271B7B00DED7A1 /* Button+Layout.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -617,6 +626,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52172715212718D200DED7A1 /* ImageButtonsVC.swift in Sources */,
 				5275D7C72126BB9E00738282 /* BasicButtonsVC.swift in Sources */,
 				5275D7BC2126BB3B00738282 /* AppDelegate.swift in Sources */,
 			);
@@ -630,6 +640,7 @@
 				5275D7DE2126F3BC00738282 /* Button+State.swift in Sources */,
 				8933C7851EB5B820000D00A4 /* Button.swift in Sources */,
 				5275D7D92126D5DA00738282 /* Button+StyleSetup.swift in Sources */,
+				5217271721271B7B00DED7A1 /* Button+Layout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -650,6 +661,7 @@
 				5275D7E02126F3BC00738282 /* Button+State.swift in Sources */,
 				8933C7871EB5B820000D00A4 /* Button.swift in Sources */,
 				5275D7DB2126D5DB00738282 /* Button+StyleSetup.swift in Sources */,
+				5217271921271B7B00DED7A1 /* Button+Layout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -661,6 +673,7 @@
 				5275D7E12126F3BC00738282 /* Button+State.swift in Sources */,
 				8933C7881EB5B820000D00A4 /* Button.swift in Sources */,
 				5275D7DC2126D5DC00738282 /* Button+StyleSetup.swift in Sources */,
+				5217271A21271B7B00DED7A1 /* Button+Layout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -672,6 +685,7 @@
 				5275D7DF2126F3BC00738282 /* Button+State.swift in Sources */,
 				8933C7861EB5B820000D00A4 /* Button.swift in Sources */,
 				5275D7DA2126D5DA00738282 /* Button+StyleSetup.swift in Sources */,
+				5217271821271B7B00DED7A1 /* Button+Layout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

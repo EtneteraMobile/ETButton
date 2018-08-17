@@ -20,6 +20,15 @@ open class Button: UIButton {
 
     var customTintColor: UIColor?
 
+    public var iconImage: UIImage? = nil {
+        didSet {
+            // TODO: Image rendering mode
+            setImage(iconImage, for: .normal)
+
+            setNeedsLayout()
+        }
+    }
+
     // MARK: - Initialization
 
     public override init(frame: CGRect) {
@@ -66,5 +75,15 @@ open class Button: UIButton {
         didSet {
             updateStateStyle()
         }
+    }
+
+    open override func layoutSubviews() {
+        super.layoutSubviews()
+
+        layoutButton()
+    }
+
+    open override var intrinsicContentSize: CGSize {
+        return getIntristicContentSize()
     }
 }
