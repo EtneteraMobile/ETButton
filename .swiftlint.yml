@@ -1,0 +1,35 @@
+disabled_rules:
+  - line_length
+  - notification_center_detachment
+  - unused_closure_parameter
+  - fallthrough
+opt_in_rules:
+  - empty_count
+# - conditional_returns_on_newline
+  - closure_end_indentation
+  - closure_spacing
+  - force_unwrapping 
+  - implicit_return
+  - multiline_parameters
+  - operator_usage_whitespace
+  - overridden_super_call
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+  - Carthage
+  - Pods
+  - Submodules
+  - Playgrounds
+  
+type_body_length:
+  - 500 # warning
+  - 800 # error
+file_length:
+  warning: 500
+  error: 1200
+identifier_name:
+  min_length: # only min_length
+    warning: 2 # only error
+nesting:
+  type_level:
+    warning: 3
+
+reporter: "xcode" # reporter type (xcode, json, csv, checkstyle, junit, html, emoji)
