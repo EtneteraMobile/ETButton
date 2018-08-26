@@ -29,6 +29,8 @@ public extension Button {
             font = style.titleDisabledStyle?.font ?? font
         }
 
+        applyCornerRadius()
+
         self.backgroundColor = bgColor
 
         self.titleLabel?.font = font
@@ -37,5 +39,13 @@ public extension Button {
         self.setTitleColor(style.titleHighlightedStyle?.textColor ?? style.titleStyle.textColor, for: .highlighted)
         self.setTitleColor(style.titleSelectedStyle?.textColor ?? style.titleStyle.textColor, for: .selected)
         self.setTitleColor(style.titleDisabledStyle?.textColor ?? style.titleStyle.textColor, for: .disabled)
+    }
+
+    private func applyCornerRadius() {
+        switch style.cornerRadius?.0 {
+        default:
+            let radius = style.cornerRadius?.1 ?? 0
+            self.layer.cornerRadius = radius
+        }
     }
 }

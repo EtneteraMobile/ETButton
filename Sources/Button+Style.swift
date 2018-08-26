@@ -11,11 +11,11 @@ import UIKit
 public struct Edge: OptionSet, Equatable {
     public let rawValue: Int
 
-    static let top = Edge(rawValue: 1)
-    static let left = Edge(rawValue: 2)
-    static let bottom = Edge(rawValue: 4)
-    static let right = Edge(rawValue: 8)
-    static let all = Edge(rawValue: 15)
+    public static let top = Edge(rawValue: 1)
+    public static let left = Edge(rawValue: 2)
+    public static let bottom = Edge(rawValue: 4)
+    public static let right = Edge(rawValue: 8)
+    public static let all = Edge(rawValue: 15)
 
     public init(rawValue: Int) {
         self.rawValue = rawValue
@@ -25,11 +25,11 @@ public struct Edge: OptionSet, Equatable {
 public struct Corner: OptionSet, Equatable {
     public let rawValue: Int
 
-    static let topLeft = Corner(rawValue: 1)
-    static let topRight = Corner(rawValue: 2)
-    static let bottomLeft = Corner(rawValue: 4)
-    static let bottomRight = Corner(rawValue: 8)
-    static let all = Corner(rawValue: 15)
+    public static let topLeft = Corner(rawValue: 1)
+    public static let topRight = Corner(rawValue: 2)
+    public static let bottomLeft = Corner(rawValue: 4)
+    public static let bottomRight = Corner(rawValue: 8)
+    public static let all = Corner(rawValue: 15)
 
     public init(rawValue: Int) {
         self.rawValue = rawValue
@@ -98,15 +98,15 @@ public extension Button {
         let subtitleDisabledStyle: LabelStyle?
 
         // Borders
-        let borderWidth: (Edge, CGFloat)? // Width for all specified borders
-        let borderWidths: [(Edge, CGFloat)]? // Separate width for each border
+        let borderWidth: (Edge, CGFloat)? /// Width for all specified borders
+        let borderWidths: [(Edge, CGFloat)]? /// Separate width for each border
 
-        let borderColor: (Edge, UIColor)? // Color for all specified borders
-        let borderColors: [(Edge, UIColor)]? // Separate color for each border
+        let borderColor: (Edge, UIColor)? /// Color for all specified borders
+        let borderColors: [(Edge, UIColor)]? /// Separate color for each border
 
         // Corners
-        let cornerRadius: (Corner, CGFloat)? // Radius for all specified borders
-        let cornerRadiuses: [(Corner, CGFloat)]? // Separate radius for each border
+        let cornerRadius: (Corner, CGFloat)? /// Radius for all specified borders. Works only for .all.s
+        let cornerRadiuses: [(Corner, CGFloat)]? /// Separate radius for each border. Doesn't work in this version.
 
         public init(backgroundColor: UIColor = .clear,
                     backgroundHighlightedColor: UIColor? = nil,
