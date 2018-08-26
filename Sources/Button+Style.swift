@@ -105,7 +105,7 @@ public extension Button {
         let borderColors: [(Edge, UIColor)]? /// Separate color for each border
 
         // Corners
-        let cornerRadius: (Corner, CGFloat)? /// Radius for all specified borders. Works only for .all.s
+        let cornerRadius: (Corner, CGFloat)? /// Radius for all specified borders. Works only for .all.
         let cornerRadiuses: [(Corner, CGFloat)]? /// Separate radius for each border. Doesn't work in this version.
 
         public init(backgroundColor: UIColor = .clear,
