@@ -1,5 +1,5 @@
 //
-//  ETButtonTests.swift
+//  StateSnapshotTests.swift
 //  Etnetera a.s.
 //
 //  Created by Jiri Zoudun on 17/08/2018.
@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import XCTest
 import ETButton
 import FBSnapshotTestCase
 
