@@ -35,6 +35,7 @@
 		52A35F652132A7FC0037E7D9 /* PositionSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A35F642132A7FC0037E7D9 /* PositionSnapshotTests.swift */; };
 		52A35F662132AA880037E7D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5275D7BD2126BB3C00738282 /* Assets.xcassets */; };
 		52A35F692132F5740037E7D9 /* RoundedCornersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A35F682132F5740037E7D9 /* RoundedCornersVC.swift */; };
+		52A35F6B21330D8A0037E7D9 /* CornerRadiusSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A35F6A21330D8A0037E7D9 /* CornerRadiusSnapshotTests.swift */; };
 		52D6D9871BEFF229002C0205 /* ETButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6D97C1BEFF229002C0205 /* ETButton.framework */; };
 		8933C7851EB5B820000D00A4 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7841EB5B820000D00A4 /* Button.swift */; };
 		8933C7861EB5B820000D00A4 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7841EB5B820000D00A4 /* Button.swift */; };
@@ -108,6 +109,7 @@
 		5275D7DD2126F3BC00738282 /* Button+State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+State.swift"; sourceTree = "<group>"; };
 		52A35F642132A7FC0037E7D9 /* PositionSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionSnapshotTests.swift; sourceTree = "<group>"; };
 		52A35F682132F5740037E7D9 /* RoundedCornersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornersVC.swift; sourceTree = "<group>"; };
+		52A35F6A21330D8A0037E7D9 /* CornerRadiusSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadiusSnapshotTests.swift; sourceTree = "<group>"; };
 		52D6D97C1BEFF229002C0205 /* ETButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ETButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D6D9861BEFF229002C0205 /* ETButton-iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ETButton-iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D6D9E21BEFFF6E002C0205 /* ETButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ETButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -269,6 +271,7 @@
 			children = (
 				8933C7891EB5B82A000D00A4 /* StateSnapshotTests.swift */,
 				52A35F642132A7FC0037E7D9 /* PositionSnapshotTests.swift */,
+				52A35F6A21330D8A0037E7D9 /* CornerRadiusSnapshotTests.swift */,
 				521727122127104B00DED7A1 /* Constants.swift */,
 			);
 			name = Tests;
@@ -667,6 +670,7 @@
 			files = (
 				8933C7901EB5B82D000D00A4 /* StateSnapshotTests.swift in Sources */,
 				521727132127104B00DED7A1 /* Constants.swift in Sources */,
+				52A35F6B21330D8A0037E7D9 /* CornerRadiusSnapshotTests.swift in Sources */,
 				52A35F652132A7FC0037E7D9 /* PositionSnapshotTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

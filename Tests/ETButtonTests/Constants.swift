@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ETButton
 
 class Constants {
     static let backgroundColor = UIColor(red: 0.133, green: 0.407, blue: 0.121, alpha: 1)
@@ -21,4 +22,18 @@ class Constants {
 
     static let boldFont = UIFont.boldSystemFont(ofSize: 14)
     static let italicFont = UIFont.italicSystemFont(ofSize: 14)
+
+    static func getButtonStyle(position: IconImagePosition, spacing: CGFloat = CGFloat.nan, cornerRadius: CGFloat = 0) -> Button.Style {
+        return Button.Style(backgroundColor: Constants.backgroundColor,
+                            backgroundHighlightedColor: Constants.highlightedBackgroundColor,
+                            backgroundSelectedColor: Constants.selectedBackgroundColor,
+                            backgroundDisabledColor: Constants.disabledBackgroundColor,
+                            titleStyle: Button.LabelStyle(textColor: Constants.foregroundColor, font: Constants.boldFont),
+                            titleHighlightedStyle: Button.LabelStyle(textColor: Constants.highlightedForegroundColor),
+                            titleSelectedStyle: Button.LabelStyle(textColor: Constants.selectedForegroundColor),
+                            titleDisabledStyle: Button.LabelStyle(textColor: Constants.disabledForegroundColor, font: Constants.italicFont),
+                            iconImagePosition: position,
+                            textIconOffset: spacing,
+                            cornerRadius: (Corner.all, cornerRadius))
+    }
 }
