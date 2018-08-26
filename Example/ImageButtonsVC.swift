@@ -23,14 +23,18 @@ class ImageButtonsVC: UIViewController {
 
     let relativeRight = Button()
     let fixedRight = Button()
+    let relativeRightWider = Button()
     let fixedRightWider = Button()
     let fixedRightAlignmentLeft = Button()
     let fixedRightAlignmentRight = Button()
     let relativeLeft = Button()
     let fixedLeft = Button()
+    let relativeLeftWider = Button()
     let fixedLeftWider = Button()
     let fixedLeftAlignmentRight = Button()
     let fixedLeftAlignmentLeft = Button()
+
+    let aboveLabel = Button()
 
     let buttonsView = UIStackView()
 
@@ -65,7 +69,8 @@ class ImageButtonsVC: UIViewController {
         footerView.translatesAutoresizingMaskIntoConstraints = false
         footerView.backgroundColor = .green
 
-        let buttons = [relativeRight, fixedRight, fixedRightWider, fixedRightAlignmentLeft, fixedRightAlignmentRight, relativeLeft, fixedLeft, fixedLeftWider, fixedLeftAlignmentRight, fixedLeftAlignmentLeft]
+        let buttons = [relativeRight, fixedRight, relativeRightWider, fixedRightWider, fixedRightAlignmentLeft, fixedRightAlignmentRight, relativeLeft, fixedLeft, relativeLeftWider, fixedLeftWider, fixedLeftAlignmentRight, fixedLeftAlignmentLeft, aboveLabel]
+
         buttons.forEach {
             buttonsView.addArrangedSubview($0)
             $0.translatesAutoresizingMaskIntoConstraints = false
@@ -79,20 +84,26 @@ class ImageButtonsVC: UIViewController {
 
         relativeRight.style = getButtonStyle(position: .relativeRight)
         fixedRight.style = getButtonStyle(position: .fixedRight)
+        relativeRightWider.style = getButtonStyle(position: .relativeRight)
         fixedRightWider.style = getButtonStyle(position: .fixedRight)
         fixedRightAlignmentLeft.style = getButtonStyle(position: .fixedRight)
         fixedRightAlignmentRight.style = getButtonStyle(position: .fixedRight)
         relativeLeft.style = getButtonStyle(position: .relativeLeft)
         fixedLeft.style = getButtonStyle(position: .fixedLeft)
+        relativeLeftWider.style = getButtonStyle(position: .relativeLeft)
         fixedLeftWider.style = getButtonStyle(position: .fixedLeft)
         fixedLeftAlignmentRight.style = getButtonStyle(position: .fixedLeft)
         fixedLeftAlignmentLeft.style = getButtonStyle(position: .fixedLeft)
+        aboveLabel.style = getButtonStyle(position: .aboveLabel)
 
         relativeRight.setTitle("relativeRight", for: .normal)
         relativeRight.iconImage = UIImage(named: "icon")
 
         fixedRight.setTitle("fixedRight", for: .normal)
         fixedRight.iconImage = UIImage(named: "icon")
+
+        relativeRightWider.setTitle("relativeRightWider", for: .normal)
+        relativeRightWider.iconImage = UIImage(named: "icon")
 
         fixedRightWider.setTitle("fixedRightWider", for: .normal)
         fixedRightWider.iconImage = UIImage(named: "icon")
@@ -111,6 +122,9 @@ class ImageButtonsVC: UIViewController {
         fixedLeft.setTitle("fixedLeft", for: .normal)
         fixedLeft.iconImage = UIImage(named: "icon")
 
+        relativeLeftWider.setTitle("relativeLeftWider", for: .normal)
+        relativeLeftWider.iconImage = UIImage(named: "icon")
+
         fixedLeftWider.setTitle("fixedLeftWider", for: .normal)
         fixedLeftWider.iconImage = UIImage(named: "icon")
 
@@ -122,11 +136,16 @@ class ImageButtonsVC: UIViewController {
         fixedLeftAlignmentLeft.iconImage = UIImage(named: "icon")
         fixedLeftAlignmentLeft.contentHorizontalAlignment = .left
 
+        aboveLabel.setTitle("aboveLabel", for: .normal)
+        aboveLabel.iconImage = UIImage(named: "icon")
+
         // Custom widths
         NSLayoutConstraint.activate([
+            relativeRightWider.widthAnchor.constraint(equalTo: buttonsView.widthAnchor, constant: -2 * displayPadding),
             fixedRightWider.widthAnchor.constraint(equalTo: buttonsView.widthAnchor, constant: -2 * displayPadding),
             fixedRightAlignmentLeft.widthAnchor.constraint(equalTo: buttonsView.widthAnchor, constant: -2 * displayPadding),
             fixedRightAlignmentRight.widthAnchor.constraint(equalTo: buttonsView.widthAnchor, constant: -2 * displayPadding),
+            relativeLeftWider.widthAnchor.constraint(equalTo: buttonsView.widthAnchor, constant: -2 * displayPadding),
             fixedLeftWider.widthAnchor.constraint(equalTo: buttonsView.widthAnchor, constant: -2 * displayPadding),
             fixedLeftAlignmentRight.widthAnchor.constraint(equalTo: buttonsView.widthAnchor, constant: -2 * displayPadding),
             fixedLeftAlignmentLeft.widthAnchor.constraint(equalTo: buttonsView.widthAnchor, constant: -2 * displayPadding)

@@ -42,8 +42,8 @@ public enum IconImagePosition: Int {
     case fixedLeft // DOCU: Doesn't respect image and title insets - use relativeLeft
     case relativeRight // DOCU: Doesn't respect image and title insets - use relativeLeft
     case fixedRight // DOCU: Doesn't respect image and title insets - use relativeLeft
-    case bellowLabel
-    case aboveLabel
+    case bellowLabel // DOCU: Doesn't respect image and title insets - use relativeLeft
+    case aboveLabel // DOCU: Not implemented at all
 }
 
 public extension Button {

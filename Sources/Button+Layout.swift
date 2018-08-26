@@ -78,7 +78,7 @@ extension Button {
                     titleLabel.right = imageView.left - space
                 }
             }
-        case .aboveLabel: // CHECK
+        case .aboveLabel: // DONE
             let imageSize = iconImage.size
             let titleSize = titleLabel.frame.size
 
