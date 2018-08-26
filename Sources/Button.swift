@@ -29,6 +29,8 @@ open class Button: UIButton {
         }
     }
 
+    private let padding: CGFloat = 6
+
     // MARK: - Initialization
 
     public override init(frame: CGRect) {
@@ -37,12 +39,20 @@ open class Button: UIButton {
 
         super.init(frame: frame)
 
+        self.setupContent()
+
         super.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         self.reloadStyle()
     }
 
     public required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    // MARK: - Content
+
+    private func setupContent() {
+        self.contentEdgeInsets = UIEdgeInsets(top: 0, left: padding, bottom: 0, right: padding)
     }
 
     // MARK: - Overrides

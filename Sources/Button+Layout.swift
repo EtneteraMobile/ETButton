@@ -11,13 +11,12 @@ import UIKit
 extension Button {
 
     private var textIconOffset: CGFloat { return 6 }
-    private var padding: CGFloat { return 6 }
 
     func layoutButton() {
 
         let space: CGFloat = style.textIconOffset.isNaN == false ? style.textIconOffset : CGFloat(roundf(Float(textIconOffset) / 2))
-        let leftPadding = contentEdgeInsets.left > 0 ? contentEdgeInsets.left : padding
-        let rightPadding = contentEdgeInsets.right > 0 ? contentEdgeInsets.right : padding
+        let leftPadding = contentEdgeInsets.left
+        let rightPadding = contentEdgeInsets.right
 
         if self.iconImage != nil {
             layoutButtonWithIcon(space: space, leftPadding: leftPadding, rightPadding: rightPadding)
@@ -54,7 +53,8 @@ extension Button {
 
         case .relativeRight: // DONE
             var imageInsets = imageEdgeInsets
-            imageInsets.left = titleLabel.right + space
+            imageInsets.left = titleLabel.width + space
+            imageInsets.right = -titleLabel.width - space
             imageEdgeInsets = imageInsets
 
             var titleInsets = self.titleEdgeInsets
@@ -97,9 +97,11 @@ extension Button {
     }
 
     func getIntristicContentSize() -> CGSize {
-        let space: CGFloat = iconImage != nil ? CGFloat(roundf(Float(textIconOffset) / 2)) : 0
-        let leftPadding = contentEdgeInsets.left > 0 ? contentEdgeInsets.left : padding
-        let rightPadding = contentEdgeInsets.right > 0 ? contentEdgeInsets.right : padding
+        let offset: CGFloat = style.textIconOffset.isNaN == false ? style.textIconOffset : CGFloat(roundf(Float(textIconOffset) / 2))
+        let space: CGFloat = iconImage != nil ? offset : 0
+
+        let leftPadding = contentEdgeInsets.left
+        let rightPadding = contentEdgeInsets.right
 
         let iconWidth: CGFloat = iconImage?.size.width ?? 0
         let titleWidth: CGFloat = titleLabel?.intrinsicContentSize.width ?? 0
