@@ -20,6 +20,9 @@ open class Button: UIButton {
 
     var customTintColor: UIColor?
 
+    // TODO: ImageView size
+    // TODO: Rendering mode
+
     public var iconImage: UIImage? = nil {
         didSet {
             // TODO: Image rendering mode

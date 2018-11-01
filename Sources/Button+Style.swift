@@ -42,8 +42,8 @@ public enum IconImagePosition: Int {
     case fixedLeft // DOCU: Doesn't respect image and title insets - use relativeLeft
     case relativeRight // DOCU: Doesn't respect image and title insets - use relativeLeft
     case fixedRight // DOCU: Doesn't respect image and title insets - use relativeLeft
-    case bellowLabel // DOCU: Doesn't respect image and title insets - use relativeLeft
-    case aboveLabel // DOCU: Not implemented at all
+    case aboveLabel // DOCU: Doesn't respect image and title insets - use relativeLeft
+    case bellowLabel // DOCU: Not implemented at all
 }
 
 public extension Button {
@@ -104,6 +104,15 @@ public extension Button {
         let borderColor: (Edge, UIColor)? /// Color for all specified borders
         let borderColors: [(Edge, UIColor)]? /// Separate color for each border
 
+        let borderHighlightedColor: (Edge, UIColor)? /// Color for all specified borders
+        let borderHighlightedColors: [(Edge, UIColor)]? /// Separate color for each border
+
+        let borderSelectedColor: (Edge, UIColor)? /// Color for all specified borders
+        let borderSelectedColors: [(Edge, UIColor)]? /// Separate color for each border
+
+        let borderDisabledColor: (Edge, UIColor)? /// Color for all specified borders
+        let borderDisabledColors: [(Edge, UIColor)]? /// Separate color for each border
+
         // Corners
         let cornerRadius: (Corner, CGFloat)? /// Radius for all specified borders. Works only for .all.
         let cornerRadiuses: [(Corner, CGFloat)]? /// Separate radius for each border. Doesn't work in this version.
@@ -130,6 +139,12 @@ public extension Button {
                     borderWidths: [(Edge, CGFloat)]? = nil,
                     borderColor: (Edge, UIColor)? = nil,
                     borderColors: [(Edge, UIColor)]? = nil,
+                    borderHighlightedColor: (Edge, UIColor)? = nil,
+                    borderHighlightedColors: [(Edge, UIColor)]? = nil,
+                    borderSelectedColor: (Edge, UIColor)? = nil,
+                    borderSelectedColors: [(Edge, UIColor)]? = nil,
+                    borderDisabledColor: (Edge, UIColor)? = nil,
+                    borderDisabledColors: [(Edge, UIColor)]? = nil,
                     cornerRadius: (Corner, CGFloat)? = nil,
                     cornerRadiuses: [(Corner, CGFloat)]? = nil) {
 
@@ -155,6 +170,12 @@ public extension Button {
             self.borderWidths = borderWidths
             self.borderColor = borderColor
             self.borderColors = borderColors
+            self.borderHighlightedColor = borderHighlightedColor
+            self.borderHighlightedColors = borderHighlightedColors
+            self.borderSelectedColor = borderSelectedColor
+            self.borderSelectedColors = borderSelectedColors
+            self.borderDisabledColor = borderDisabledColor
+            self.borderDisabledColors = borderDisabledColors
             self.cornerRadius = cornerRadius
             self.cornerRadiuses = cornerRadiuses
         }

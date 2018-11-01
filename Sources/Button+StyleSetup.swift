@@ -14,20 +14,22 @@ extension Button {
         let s = self.style // swiftlint:disable:this identifier_name
         let cs = self.currentStyle
 
-        if s.backgroundColor != cs.backgroundColor { updateBackgroundColor() }
-        if s.backgroundHighlightedColor != cs.backgroundHighlightedColor { updateBackgroundHighlightedColor() }
-        if s.backgroundSelectedColor != cs.backgroundSelectedColor { updateBackgroundSelectedColor() }
-        if s.backgroundDisabledColor != cs.backgroundDisabledColor { updateBackgroundDisabledColor() }
-        if s.backgroundView != cs.backgroundView { updateBackgroundView() }
-        if s.backgroundHighlightedView != cs.backgroundHighlightedView { updateBackgroundHighlightedView() }
-        if s.backgroundSelectedView != cs.backgroundSelectedView { updateBackgroundSelectedView() }
-        if s.backgroundDisabledView != cs.backgroundDisabledView { updateBackgroundDisabledView() }
-        if s.titleStyle != cs.titleStyle { updateTitleStyle() }
-        if s.titleHighlightedStyle != cs.titleHighlightedStyle { updateTitleHighlightedStyle() }
-        if s.titleDisabledStyle != cs.titleDisabledStyle { updateTitleDisabledStyle() }
-        if s.subtitleStyle != cs.subtitleStyle { updateSubtitleStyle() }
-        if s.subtitleHighlightedStyle != cs.subtitleHighlightedStyle { updateSubtitleHighlightedStyle() }
-        if s.subtitleDisabledStyle != cs.subtitleDisabledStyle { updateSubtitleDisabledStyle() }
+        var needsUpdateStyle = false
+
+        if s.backgroundColor != cs.backgroundColor { needsUpdateStyle = true }
+        if s.backgroundHighlightedColor != cs.backgroundHighlightedColor { needsUpdateStyle = true }
+        if s.backgroundSelectedColor != cs.backgroundSelectedColor { needsUpdateStyle = true }
+        if s.backgroundDisabledColor != cs.backgroundDisabledColor { needsUpdateStyle = true }
+        if s.backgroundView != cs.backgroundView { needsUpdateStyle = true }
+        if s.backgroundHighlightedView != cs.backgroundHighlightedView { needsUpdateStyle = true }
+        if s.backgroundSelectedView != cs.backgroundSelectedView { needsUpdateStyle = true }
+        if s.backgroundDisabledView != cs.backgroundDisabledView { needsUpdateStyle = true }
+        if s.titleStyle != cs.titleStyle { needsUpdateStyle = true }
+        if s.titleHighlightedStyle != cs.titleHighlightedStyle { needsUpdateStyle = true }
+        if s.titleDisabledStyle != cs.titleDisabledStyle { needsUpdateStyle = true }
+        if s.subtitleStyle != cs.subtitleStyle { needsUpdateStyle = true }
+        if s.subtitleHighlightedStyle != cs.subtitleHighlightedStyle { needsUpdateStyle = true }
+        if s.subtitleDisabledStyle != cs.subtitleDisabledStyle { needsUpdateStyle = true }
         // Implement and solve comparison of tuples
 //        if s.borderWidth != cs.borderWidth { updateBorderWidth() }
 //        if s.borderWidths != cs.borderWidths { updateBorderWidths() }
@@ -37,121 +39,13 @@ extension Button {
 //        if s.cornerRadiuses != cs.cornerRadiuses { updateCornerRadiuses() }
 
         self.currentStyle = style
+
+        if needsUpdateStyle == true {
+            updateStateStyle()
+        }
     }
 
     func reloadStyle() {
-//        updateBackgroundColor()
-//        updateBackgroundHighlightedColor()
-//        updateBackgroundHighlightedColor()
-//        updateBackgroundDisabledColor()
-//        updateBackgroundView()
-//        updateBackgroundHighlightedView()
-//        updateBackgroundSelectedView()
-//        updateBackgroundDisabledView()
-
         updateStateStyle()
-
-        updateTitleStyle()
-        updateTitleHighlightedStyle()
-        updateTitleSelectedStyle()
-        updateTitleDisabledStyle()
-        updateSubtitleStyle()
-        updateSubtitleHighlightedStyle()
-        updateSubtitleSelectedStyle()
-        updateSubtitleDisabledStyle()
-        updateBorderWidth()
-        updateBorderWidths()
-        updateBorderColor()
-        updateBorderColors()
-        updateCornerRadius()
-        updateCornerRadiuses()
-    }
-
-    func updateBackgroundColor() {
-        updateStateStyle()
-    }
-
-    func updateBackgroundHighlightedColor() {
-        updateStateStyle()
-    }
-
-    func updateBackgroundSelectedColor() {
-        updateStateStyle()
-    }
-
-    func updateBackgroundDisabledColor() {
-        updateStateStyle()
-    }
-
-    func updateBackgroundView() {
-        updateStateStyle()
-    }
-
-    func updateBackgroundHighlightedView() {
-        updateStateStyle()
-    }
-
-    func updateBackgroundSelectedView() {
-        updateStateStyle()
-    }
-
-    func updateBackgroundDisabledView() {
-        updateStateStyle()
-    }
-
-    func updateTitleStyle() {
-        updateStateStyle()
-    }
-
-    func updateTitleHighlightedStyle() {
-        updateStateStyle()
-    }
-
-    func updateTitleSelectedStyle() {
-        updateStateStyle()
-    }
-
-    func updateTitleDisabledStyle() {
-        updateStateStyle()
-    }
-
-    func updateSubtitleStyle() {
-        updateStateStyle()
-    }
-
-    func updateSubtitleHighlightedStyle() {
-        updateStateStyle()
-    }
-
-    func updateSubtitleSelectedStyle() {
-        updateStateStyle()
-    }
-
-    func updateSubtitleDisabledStyle() {
-        updateStateStyle()
-    }
-
-    func updateBorderWidth() {
-        // Not implemented
-    }
-
-    func updateBorderWidths() {
-        // Not implemented
-    }
-
-    func updateBorderColor() {
-        // Not implemented
-    }
-
-    func updateBorderColors() {
-        // Not implemented
-    }
-
-    func updateCornerRadius() {
-        // Not implemented
-    }
-
-    func updateCornerRadiuses() {
-        // Not implemented
     }
 }

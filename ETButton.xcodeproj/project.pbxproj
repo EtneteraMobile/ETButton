@@ -37,6 +37,7 @@
 		52A35F692132F5740037E7D9 /* RoundedCornersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A35F682132F5740037E7D9 /* RoundedCornersVC.swift */; };
 		52A35F6B21330D8A0037E7D9 /* CornerRadiusSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A35F6A21330D8A0037E7D9 /* CornerRadiusSnapshotTests.swift */; };
 		52D6D9871BEFF229002C0205 /* ETButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6D97C1BEFF229002C0205 /* ETButton.framework */; };
+		52EC54EF218B4920009D2691 /* BordersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EC54EE218B4920009D2691 /* BordersVC.swift */; };
 		8933C7851EB5B820000D00A4 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7841EB5B820000D00A4 /* Button.swift */; };
 		8933C7861EB5B820000D00A4 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7841EB5B820000D00A4 /* Button.swift */; };
 		8933C7871EB5B820000D00A4 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7841EB5B820000D00A4 /* Button.swift */; };
@@ -115,6 +116,7 @@
 		52D6D9E21BEFFF6E002C0205 /* ETButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ETButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D6D9F01BEFFFBE002C0205 /* ETButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ETButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D6DA0F1BF000BD002C0205 /* ETButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ETButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		52EC54EE218B4920009D2691 /* BordersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BordersVC.swift; sourceTree = "<group>"; };
 		8933C7841EB5B820000D00A4 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		8933C7891EB5B82A000D00A4 /* StateSnapshotTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateSnapshotTests.swift; sourceTree = "<group>"; };
 		AD2FAA261CD0B6D800659CF4 /* ETButton.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ETButton.plist; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 				5275D7C62126BB9E00738282 /* BasicButtonsVC.swift */,
 				52172714212718D200DED7A1 /* ImageButtonsVC.swift */,
 				52A35F682132F5740037E7D9 /* RoundedCornersVC.swift */,
+				52EC54EE218B4920009D2691 /* BordersVC.swift */,
 			);
 			path = "Example View Controllers";
 			sourceTree = "<group>";
@@ -488,12 +491,13 @@
 					5275D7B82126BB3B00738282 = {
 						CreatedOnToolsVersion = 9.4.1;
 						DevelopmentTeam = 229224RXQV;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 					};
 					52D6D97B1BEFF229002C0205 = {
 						CreatedOnToolsVersion = 7.1;
 						DevelopmentTeam = 229224RXQV;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 1000;
 					};
 					52D6D9851BEFF229002C0205 = {
 						CreatedOnToolsVersion = 7.1;
@@ -646,6 +650,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52172715212718D200DED7A1 /* ImageButtonsVC.swift in Sources */,
+				52EC54EF218B4920009D2691 /* BordersVC.swift in Sources */,
 				5275D7C72126BB9E00738282 /* BasicButtonsVC.swift in Sources */,
 				5275D7BC2126BB3B00738282 /* AppDelegate.swift in Sources */,
 				52A35F692132F5740037E7D9 /* RoundedCornersVC.swift in Sources */,
@@ -787,7 +792,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = cz.etnetera.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -815,7 +820,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = cz.etnetera.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -952,7 +957,7 @@
 				PRODUCT_NAME = ETButton;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -976,7 +981,7 @@
 				PRODUCT_NAME = ETButton;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
