@@ -42,6 +42,7 @@
 		52F4C2A721B8733C004A4685 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521727122127104B00DED7A1 /* Constants.swift */; };
 		52F4C2A821B8733D004A4685 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521727122127104B00DED7A1 /* Constants.swift */; };
 		52F4C2A921B8733D004A4685 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521727122127104B00DED7A1 /* Constants.swift */; };
+		52F4C2AB21B8790A004A4685 /* ButtonActionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F4C2AA21B8790A004A4685 /* ButtonActionsTests.swift */; };
 		8933C7851EB5B820000D00A4 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7841EB5B820000D00A4 /* Button.swift */; };
 		8933C7861EB5B820000D00A4 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7841EB5B820000D00A4 /* Button.swift */; };
 		8933C7871EB5B820000D00A4 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7841EB5B820000D00A4 /* Button.swift */; };
@@ -122,6 +123,7 @@
 		52D6D9F01BEFFFBE002C0205 /* ETButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ETButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D6DA0F1BF000BD002C0205 /* ETButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ETButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52EC54EE218B4920009D2691 /* BordersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BordersVC.swift; sourceTree = "<group>"; };
+		52F4C2AA21B8790A004A4685 /* ButtonActionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonActionsTests.swift; sourceTree = "<group>"; };
 		8933C7841EB5B820000D00A4 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		8933C7891EB5B82A000D00A4 /* StateSnapshotTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateSnapshotTests.swift; sourceTree = "<group>"; };
 		AD2FAA261CD0B6D800659CF4 /* ETButton.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ETButton.plist; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 				52A35F642132A7FC0037E7D9 /* PositionSnapshotTests.swift */,
 				52A35F6A21330D8A0037E7D9 /* CornerRadiusSnapshotTests.swift */,
 				5281D3EC2198753F002A8864 /* BorderSnapshotTests.swift */,
+				52F4C2AA21B8790A004A4685 /* ButtonActionsTests.swift */,
 			);
 			name = Tests;
 			path = Tests/ETButtonTests;
@@ -683,6 +686,7 @@
 				52F4C2A821B8733D004A4685 /* Constants.swift in Sources */,
 				8933C7901EB5B82D000D00A4 /* StateSnapshotTests.swift in Sources */,
 				52A35F6B21330D8A0037E7D9 /* CornerRadiusSnapshotTests.swift in Sources */,
+				52F4C2AB21B8790A004A4685 /* ButtonActionsTests.swift in Sources */,
 				52A35F652132A7FC0037E7D9 /* PositionSnapshotTests.swift in Sources */,
 				5281D3EE21987599002A8864 /* BorderSnapshotTests.swift in Sources */,
 			);

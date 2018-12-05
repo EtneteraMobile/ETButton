@@ -63,8 +63,8 @@ open class Button: UIButton {
         super.init(frame: frame)
 
         self.setupContent()
+        self.setupActions()
 
-        super.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         self.reloadStyle()
     }
 
@@ -80,12 +80,16 @@ open class Button: UIButton {
 
     // MARK: - Actions
 
+    private func setupActions() {
+        super.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+    }
+
     @objc func buttonAction() {
         onButtonTouch?()
     }
 
     // MARK: - Overrides
-    
+
     open override var tintColor: UIColor! {
         didSet {
             self.layer.borderColor = tintColor.cgColor

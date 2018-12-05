@@ -52,4 +52,18 @@ class BorderSnapshotTest: FBSnapshotTestCase {
 
         FBSnapshotVerifyView(button)
     }
+
+    func testCustomBorderTint() {
+        button.style = Constants.getButtonStyle(position: .relativeLeft, spacing: 10, cornerRadius: 10, borderWidth: 2)
+        button.tintColor = .blue
+
+        FBSnapshotVerifyView(button)
+    }
+
+    func testCustomBorderTintSetBeforeStyle() {
+        button.tintColor = .blue
+        button.style = Constants.getButtonStyle(position: .relativeLeft, spacing: 10, cornerRadius: 10, borderWidth: 2)
+
+        FBSnapshotVerifyView(button)
+    }
 }

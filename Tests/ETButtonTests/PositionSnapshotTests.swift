@@ -12,7 +12,7 @@ import FBSnapshotTestCase
 class PositionSnapshotTests: FBSnapshotTestCase {
 
     // MARK: - Test variables
-    
+
     private var button: Button!
 
     // MARK: - Setup
