@@ -12,115 +12,119 @@ import FBSnapshotTestCase
 
 class StateSnapshotTests: FBSnapshotTestCase {
 
-    var button: Button!
-    var customStyle: Button.Style!
+    // MARK: - Test variables
+
+    private var button: Button!
+
+    // MARK: - Setup
 
     override func setUp() {
         super.setUp()
 
-        button = Button(frame: CGRect(x: 0, y: 0, width: 200, height: 44))
-        customStyle = Button.Style(backgroundColor: Constants.backgroundColor,
-                                    backgroundHighlightedColor: Constants.highlightedBackgroundColor,
-                                    backgroundSelectedColor: Constants.selectedBackgroundColor,
-                                    backgroundDisabledColor: Constants.disabledBackgroundColor,
-                                    titleStyle: Button.LabelStyle(textColor: Constants.foregroundColor, font: Constants.boldFont),
-                                    titleHighlightedStyle: Button.LabelStyle(textColor: Constants.highlightedForegroundColor),
-                                    titleSelectedStyle: Button.LabelStyle(textColor: Constants.selectedForegroundColor),
-                                    titleDisabledStyle: Button.LabelStyle(textColor: Constants.disabledForegroundColor, font: Constants.italicFont))
+        // Create button
+        button = Button(frame: Constants.buttonRect)
 
+        // FBSnapshotTests record mode.
         recordMode = false
     }
 
+    // MARK: - Test cases
+
     func testNoneButtonNormalState() {
-        button.style = .none
-        button.setTitle("none", for: .normal)
+        setupNoneButton()
 
         FBSnapshotVerifyView(button)
     }
 
     func testNoneButtonHighlightedState() {
-        button.style = .none
-        button.setTitle("none", for: .normal)
+        setupNoneButton()
         button.isHighlighted = true
 
         FBSnapshotVerifyView(button)
     }
 
     func testNoneButtonSelectedState() {
-        button.style = .none
-        button.setTitle("none", for: .normal)
+        setupNoneButton()
         button.isSelected = true
 
         FBSnapshotVerifyView(button)
     }
 
     func testNoneButtonDisabledState() {
-        button.style = .none
-        button.setTitle("none", for: .normal)
+        setupNoneButton()
         button.isEnabled = false
 
         FBSnapshotVerifyView(button)
     }
 
     func testBasicButtonNormalState() {
-        button.style = .basic
-        button.setTitle("basic", for: .normal)
+        setupBasicButton()
 
         FBSnapshotVerifyView(button)
     }
 
     func testBasicButtonHighlightedState() {
-        button.style = .basic
-        button.setTitle("basic", for: .normal)
+        setupBasicButton()
         button.isHighlighted = true
 
         FBSnapshotVerifyView(button)
     }
 
     func testBasicButtonSelectedState() {
-        button.style = .basic
-        button.setTitle("basic", for: .normal)
+        setupBasicButton()
         button.isSelected = true
 
         FBSnapshotVerifyView(button)
     }
 
     func testBasicButtonDisabledState() {
-        button.style = .basic
-        button.setTitle("basic", for: .normal)
+        setupBasicButton()
         button.isEnabled = false
 
         FBSnapshotVerifyView(button)
     }
 
     func testCustomButtonNormalState() {
-        button.style = customStyle
-        button.setTitle("custom", for: .normal)
+        setupCustomButton()
 
         FBSnapshotVerifyView(button)
     }
 
     func testCustomButtonHighlightedState() {
-        button.style = customStyle
-        button.setTitle("custom", for: .normal)
+        setupCustomButton()
         button.isHighlighted = true
 
         FBSnapshotVerifyView(button)
     }
 
     func testCustomButtonSelectedState() {
-        button.style = customStyle
-        button.setTitle("custom", for: .normal)
+        setupCustomButton()
         button.isSelected = true
 
         FBSnapshotVerifyView(button)
     }
 
     func testCustomButtonDisabledState() {
-        button.style = customStyle
-        button.setTitle("custom", for: .normal)
+        setupCustomButton()
         button.isEnabled = false
 
         FBSnapshotVerifyView(button)
+    }
+
+    // MARK: - Private helper methods
+
+    private func setupNoneButton() {
+        button.style = .none
+        button.setTitle("None", for: .normal)
+    }
+
+    private func setupBasicButton() {
+        button.style = .basic
+        button.setTitle("Basic", for: .normal)
+    }
+
+    private func setupCustomButton() {
+        button.style = Constants.getButtonStyle()
+        button.setTitle("Custom", for: .normal)
     }
 }

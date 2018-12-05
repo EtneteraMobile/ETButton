@@ -28,7 +28,6 @@ class BordersVC: UIViewController {
     let withBorderDisabled = Button()
     let withBorderRounded = Button()
 
-
     let buttonsView = UIStackView()
 
     // Metrics

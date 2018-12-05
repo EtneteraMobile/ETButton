@@ -48,6 +48,7 @@ class ImageButtonsVC: UIViewController {
         setupContent()
     }
 
+    // swiftlint:disable:next function_body_length
     private func setupContent() {
         view.backgroundColor = .white
 
@@ -74,6 +75,7 @@ class ImageButtonsVC: UIViewController {
         buttons.forEach {
             buttonsView.addArrangedSubview($0)
             $0.translatesAutoresizingMaskIntoConstraints = false
+            $0.titleLabel?.lineBreakMode = .byWordWrapping
 
             NSLayoutConstraint.activate([
                 $0.heightAnchor.constraint(equalToConstant: buttonHeight)

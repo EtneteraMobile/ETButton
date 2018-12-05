@@ -10,18 +10,24 @@ import ETButton
 import FBSnapshotTestCase
 
 class PositionSnapshotTests: FBSnapshotTestCase {
-    var button: Button!
-    var customStyle: Button.Style!
+
+    // MARK: - Test variables
+    
+    private var button: Button!
+
+    // MARK: - Setup
 
     override func setUp() {
         super.setUp()
 
-        button = Button(frame: CGRect(x: 0, y: 0, width: 200, height: 44))
+        button = Button(frame: Constants.buttonRect)
         button.setTitle("Title", for: .normal)
         button.iconImage = UIImage(named: "icon", in: Bundle(for: PositionSnapshotTests.self), compatibleWith: nil)
 
         recordMode = false
     }
+
+    // MARK: - Test cases
 
     func testRelativeLeftPosition() {
         button.style = Constants.getButtonStyle(position: .relativeLeft)

@@ -10,19 +10,24 @@ import ETButton
 import FBSnapshotTestCase
 
 class CornerRadiusSnapshotTests: FBSnapshotTestCase {
+
+    // MARK: - Test variables
+
     var button: Button!
-    var customStyle: Button.Style!
-    let buttonHeight: CGFloat = 44
+
+    // MARK: - Setup
 
     override func setUp() {
         super.setUp()
 
-        button = Button(frame: CGRect(x: 0, y: 0, width: 200, height: buttonHeight))
+        button = Button(frame: Constants.buttonRect)
         button.setTitle("Title", for: .normal)
         button.iconImage = UIImage(named: "icon", in: Bundle(for: PositionSnapshotTests.self), compatibleWith: nil)
 
         recordMode = false
     }
+
+    // MARK: - Test cases
 
     func testSquareCornerRadius() {
         button.style = Constants.getButtonStyle(position: .relativeLeft, spacing: 10, cornerRadius: 0)
@@ -37,7 +42,7 @@ class CornerRadiusSnapshotTests: FBSnapshotTestCase {
     }
 
     func testHalfHeightCornerRadius() {
-        button.style = Constants.getButtonStyle(position: .relativeLeft, spacing: 10, cornerRadius: buttonHeight / 2)
+        button.style = Constants.getButtonStyle(position: .relativeLeft, spacing: 10, cornerRadius: Constants.buttonRect.height / 2)
 
         FBSnapshotVerifyView(button)
     }
@@ -47,5 +52,4 @@ class CornerRadiusSnapshotTests: FBSnapshotTestCase {
 
         FBSnapshotVerifyView(button)
     }
-
 }
