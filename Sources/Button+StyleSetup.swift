@@ -9,6 +9,7 @@
 import UIKit
 
 extension Button {
+
     // swiftlint:disable:next cyclomatic_complexity
     func updateStyle() {
         let s = self.style // swiftlint:disable:this identifier_name
@@ -30,7 +31,7 @@ extension Button {
         if s.subtitleStyle != cs.subtitleStyle { needsUpdateStyle = true }
         if s.subtitleHighlightedStyle != cs.subtitleHighlightedStyle { needsUpdateStyle = true }
         if s.subtitleDisabledStyle != cs.subtitleDisabledStyle { needsUpdateStyle = true }
-        // Implement and solve comparison of tuples
+        // TODO: Implement and solve comparison of tuples
 //        if s.borderWidth != cs.borderWidth { updateBorderWidth() }
 //        if s.borderWidths != cs.borderWidths { updateBorderWidths() }
 //        if s.borderColor != cs.borderColor { updateBorderColor() }

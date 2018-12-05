@@ -15,9 +15,6 @@ public extension Button {
         var font = style.titleStyle.font
         var borderColor = style.borderColor
 
-        // TODO: Handle background view
-        // TODO: Update subtitle
-
         if self.isSelected {
             bgColor = style.backgroundSelectedColor ?? bgColor
             font = style.titleSelectedStyle?.font ?? font

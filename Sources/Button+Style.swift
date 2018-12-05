@@ -37,6 +37,7 @@ public struct Corner: OptionSet, Equatable {
 }
 
 // TODO: Spacing with asociated values?
+
 public enum IconImagePosition: Int {
     case relativeLeft
     case fixedLeft // DOCU: Doesn't respect image and title insets - use relativeLeft
@@ -50,11 +51,22 @@ public extension Button {
 
     // MARK: - Styles
     // MARK: Text
+
+    /**
+     Style of the label.
+
+     This struct is used as a part of the button style. It can't be set by itself right now.
+     */
     public struct LabelStyle: Equatable {
         let textColor: UIColor
         let font: UIFont
         let lineBreakMode: NSLineBreakMode
 
+        /**
+         Creates style of label.
+
+         
+         */
         public init(textColor: UIColor = .blue, font: UIFont = UIFont.systemFont(ofSize: UIFont.buttonFontSize), lineBreakMode: NSLineBreakMode = .byTruncatingTail) {
             self.textColor = textColor
             self.font = font
@@ -63,6 +75,10 @@ public extension Button {
     }
 
     // MARK: Button
+
+    /**
+     TODO: DOCU (will be pain in the ass)
+     */
     public struct Style {
 
         public static let none = Style()

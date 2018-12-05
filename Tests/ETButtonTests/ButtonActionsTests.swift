@@ -31,7 +31,7 @@ class ButtonActionsTests: XCTestCase {
         }
 
         // CallButton
-        button.sendActions(for: .touchUpInside)
+        button.sendActions(for: .touchUpInside) // TODO: This doesn't work
 
         sleep(1)
 
@@ -42,7 +42,7 @@ class ButtonActionsTests: XCTestCase {
         button.addTarget(self, action: #selector(select), for: .touchUpInside)
 
         // CallButton
-        button.sendActions(for: .touchUpInside)
+        button.sendActions(for: .touchUpInside)  // TODO: This doesn't work
 
         sleep(1)
 

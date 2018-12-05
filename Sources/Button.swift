@@ -10,6 +10,8 @@ import UIKit
 
 // TODO: ImageView size
 // TODO: Rendering mode
+// TODO: Handle background view
+// TODO: Update subtitle
 
 open class Button: UIButton {
 

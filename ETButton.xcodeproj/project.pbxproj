@@ -43,6 +43,11 @@
 		52F4C2A821B8733D004A4685 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521727122127104B00DED7A1 /* Constants.swift */; };
 		52F4C2A921B8733D004A4685 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521727122127104B00DED7A1 /* Constants.swift */; };
 		52F4C2AB21B8790A004A4685 /* ButtonActionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F4C2AA21B8790A004A4685 /* ButtonActionsTests.swift */; };
+		52F4C2AD21B8847D004A4685 /* FrameComputationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F4C2AC21B8847D004A4685 /* FrameComputationTests.swift */; };
+		52F4C2AF21B88577004A4685 /* UIView+Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F4C2AE21B88577004A4685 /* UIView+Extenstions.swift */; };
+		52F4C2B021B8857A004A4685 /* UIView+Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F4C2AE21B88577004A4685 /* UIView+Extenstions.swift */; };
+		52F4C2B121B8857A004A4685 /* UIView+Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F4C2AE21B88577004A4685 /* UIView+Extenstions.swift */; };
+		52F4C2B221B8857B004A4685 /* UIView+Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F4C2AE21B88577004A4685 /* UIView+Extenstions.swift */; };
 		8933C7851EB5B820000D00A4 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7841EB5B820000D00A4 /* Button.swift */; };
 		8933C7861EB5B820000D00A4 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7841EB5B820000D00A4 /* Button.swift */; };
 		8933C7871EB5B820000D00A4 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7841EB5B820000D00A4 /* Button.swift */; };
@@ -124,6 +129,8 @@
 		52D6DA0F1BF000BD002C0205 /* ETButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ETButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52EC54EE218B4920009D2691 /* BordersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BordersVC.swift; sourceTree = "<group>"; };
 		52F4C2AA21B8790A004A4685 /* ButtonActionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonActionsTests.swift; sourceTree = "<group>"; };
+		52F4C2AC21B8847D004A4685 /* FrameComputationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameComputationTests.swift; sourceTree = "<group>"; };
+		52F4C2AE21B88577004A4685 /* UIView+Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extenstions.swift"; sourceTree = "<group>"; };
 		8933C7841EB5B820000D00A4 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		8933C7891EB5B82A000D00A4 /* StateSnapshotTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateSnapshotTests.swift; sourceTree = "<group>"; };
 		AD2FAA261CD0B6D800659CF4 /* ETButton.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ETButton.plist; sourceTree = "<group>"; };
@@ -273,6 +280,7 @@
 				5275D7D72126D57200738282 /* Button+StyleSetup.swift */,
 				5275D7DD2126F3BC00738282 /* Button+State.swift */,
 				5217271621271B7B00DED7A1 /* Button+Layout.swift */,
+				52F4C2AE21B88577004A4685 /* UIView+Extenstions.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -285,6 +293,7 @@
 				52A35F6A21330D8A0037E7D9 /* CornerRadiusSnapshotTests.swift */,
 				5281D3EC2198753F002A8864 /* BorderSnapshotTests.swift */,
 				52F4C2AA21B8790A004A4685 /* ButtonActionsTests.swift */,
+				52F4C2AC21B8847D004A4685 /* FrameComputationTests.swift */,
 			);
 			name = Tests;
 			path = Tests/ETButtonTests;
@@ -672,6 +681,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5275D7CC2126C59F00738282 /* Button+Style.swift in Sources */,
+				52F4C2AF21B88577004A4685 /* UIView+Extenstions.swift in Sources */,
 				5275D7DE2126F3BC00738282 /* Button+State.swift in Sources */,
 				8933C7851EB5B820000D00A4 /* Button.swift in Sources */,
 				5275D7D92126D5DA00738282 /* Button+StyleSetup.swift in Sources */,
@@ -684,6 +694,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52F4C2A821B8733D004A4685 /* Constants.swift in Sources */,
+				52F4C2AD21B8847D004A4685 /* FrameComputationTests.swift in Sources */,
 				8933C7901EB5B82D000D00A4 /* StateSnapshotTests.swift in Sources */,
 				52A35F6B21330D8A0037E7D9 /* CornerRadiusSnapshotTests.swift in Sources */,
 				52F4C2AB21B8790A004A4685 /* ButtonActionsTests.swift in Sources */,
@@ -697,6 +708,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5275D7CE2126C5A000738282 /* Button+Style.swift in Sources */,
+				52F4C2B121B8857A004A4685 /* UIView+Extenstions.swift in Sources */,
 				5275D7E02126F3BC00738282 /* Button+State.swift in Sources */,
 				8933C7871EB5B820000D00A4 /* Button.swift in Sources */,
 				5275D7DB2126D5DB00738282 /* Button+StyleSetup.swift in Sources */,
@@ -709,6 +721,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5275D7CF2126C5A000738282 /* Button+Style.swift in Sources */,
+				52F4C2B021B8857A004A4685 /* UIView+Extenstions.swift in Sources */,
 				5275D7E12126F3BC00738282 /* Button+State.swift in Sources */,
 				8933C7881EB5B820000D00A4 /* Button.swift in Sources */,
 				5275D7DC2126D5DC00738282 /* Button+StyleSetup.swift in Sources */,
@@ -721,6 +734,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5275D7CD2126C59F00738282 /* Button+Style.swift in Sources */,
+				52F4C2B221B8857B004A4685 /* UIView+Extenstions.swift in Sources */,
 				5275D7DF2126F3BC00738282 /* Button+State.swift in Sources */,
 				8933C7861EB5B820000D00A4 /* Button.swift in Sources */,
 				5275D7DA2126D5DA00738282 /* Button+StyleSetup.swift in Sources */,
