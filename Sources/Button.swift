@@ -8,19 +8,35 @@
 
 import UIKit
 
+// TODO: ImageView size
+// TODO: Rendering mode
+
 open class Button: UIButton {
 
-    /// Button style
+    // MARK: - Constants
+
+    // Default button padding
+    private static let padding: CGFloat = 6
+
+    // MARK: - Variables
+
     var currentStyle: Style
+
+    /**
+     Style which defines visual style of button.
+     */
     public var style: Style {
         didSet {
             updateStyle()
         }
     }
 
-    // TODO: ImageView size
-    // TODO: Rendering mode
+    /**
+     Image used as button icon.
 
+     The image can be positioned via button style and in case of `.relativeLeft` also with `imageContentInsets` and `titleContentInsets` variables.
+     In other cases the image position can be altered by `textIconOffset` in button's style.
+     */
     public var iconImage: UIImage? = nil {
         didSet {
             setImage(iconImage, for: .normal)
@@ -29,7 +45,14 @@ open class Button: UIButton {
         }
     }
 
-    private let padding: CGFloat = 6
+    // MARK: - Actions
+
+    /**
+     Closure called on `.touchUpInside` event.
+
+     It's posible to attach selector directly via `addTarget` method.
+     */
+    public var onButtonTouch: (() -> Void)?
 
     // MARK: - Initialization
 
@@ -52,16 +75,17 @@ open class Button: UIButton {
     // MARK: - Content
 
     private func setupContent() {
-        self.contentEdgeInsets = UIEdgeInsets(top: 0, left: padding, bottom: 0, right: padding)
+        self.contentEdgeInsets = UIEdgeInsets(top: 0, left: Button.padding, bottom: 0, right: Button.padding)
+    }
+
+    // MARK: - Actions
+
+    @objc func buttonAction() {
+        onButtonTouch?()
     }
 
     // MARK: - Overrides
-    // MARK: Actions
-
-    @objc func buttonAction() {
-        print("\(#function)")
-    }
-
+    
     open override var tintColor: UIColor! {
         didSet {
             self.layer.borderColor = tintColor.cgColor
