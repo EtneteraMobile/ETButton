@@ -64,8 +64,6 @@ public extension Button {
 
         /**
          Creates style of label.
-
-         
          */
         public init(textColor: UIColor = .blue, font: UIFont = UIFont.systemFont(ofSize: UIFont.buttonFontSize), lineBreakMode: NSLineBreakMode = .byTruncatingTail) {
             self.textColor = textColor
@@ -77,11 +75,56 @@ public extension Button {
     // MARK: Button
 
     /**
-     TODO: DOCU (will be pain in the ass)
+     Visual style of button.
+
+     This struct will set a style of whole button. Here can be set up different aspects of visual parts.
+
+     # Parameters:
+     - backgroundColor: Color of button's background
+     - backgroundHighlightedColor: Color of button's background in highlighted state
+     - backgroundSelectedColor: Color of button's background in selected state
+     - backgroundDisabledColor: Color of button's background in disabled state
+     - backgroundView: NOT IMPLEMENTED
+     - backgroundHighlightedView: NOT IMPLEMENTED
+     - backgroundSelectedView: NOT IMPLEMENTED
+     - backgroundDisabledView: NOT IMPLEMENTED
+     - titleStyle: Style of button's title
+     - titleHighlightedStyle: Style of button's title in highlighted state
+     - titleSelectedStyle: Style of button's title in selected state
+     - titleDisabledStyle: Style of button's title in disabled state
+     - iconImagePosition: Icon position in button. For more information see **Note** section
+     - textIconOffset: Offset of title and icon in button. For more information see **Note** section
+     - subtitleStyle: NOT IMPLEMENTED
+     - subtitleHighlightedStyle: NOT IMPLEMENTED
+     - subtitleSelectedStyle: NOT IMPLEMENTED
+     - subtitleDisabledStyle: NOT IMPLEMENTED
+     - borderWidth: Tuple *(Edge, Width)* specifies width of button's border. Only implemented option is `Edge.all`.
+     - borderWidths: NOT IMPLEMENTED
+     - borderColor: Tuple *(Edge, Color)* specifies color of button's border. Only implemented option is `Edge.all`.
+     - borderColors: NOT IMPLEMENTED
+     - borderHighlightedColor: Tuple *(Edge, Color)* specifies color of button's border for highlighted state. Only implemented option is `Edge.all`.
+     - borderHighlightedColors: NOT IMPLEMENTED
+     - borderSelectedColor: Tuple *(Edge, Color)* specifies color of button's border for selected state. Only implemented option is `Edge.all`.
+     - borderSelectedColors: NOT IMPLEMENTED
+     - borderDisabledColor: Tuple *(Edge, Color)* specifies color of button's border for disabled state. Only implemented option is `Edge.all`.
+     - borderDisabledColors: NOT IMPLEMENTED
+     - cornerRadius: Tuple *(Corner, Radius)* specifies radius of button's corne. Only implemented option is `Corner.all`.
+     - cornerRadiuses: NOT IMPLEMENTED
+
+     - Note: `iconImagePosition` specifies position of icon according to the button's title. The position `.relativeLeft` works with `titleEdgeInsets` and `imageEdgeInsets` variables of button. Other positions don't respect these properties. If you need to set offset between icon and title use the `textIconOffset` variable in style struct. `.bellowLabel` is not implemented.
+
+     - ToDo: Button class doesn't respect following Style settings: `backgroundView` and related parameters; `subtitleStyle` and related parameters; separate setup for borders and corners
      */
     public struct Style {
 
+        /**
+         Style with no background and no foreground style.
+         */
         public static let none = Style()
+
+        /**
+         Style with gray highlighted state.
+         */
         public static let basic = Style(backgroundHighlightedColor: .lightGray)
 
         // Background
@@ -130,9 +173,14 @@ public extension Button {
         let borderDisabledColors: [(Edge, UIColor)]? /// Separate color for each border
 
         // Corners
-        let cornerRadius: (Corner, CGFloat)? /// Radius for all specified borders. Works only for .all.
-        let cornerRadiuses: [(Corner, CGFloat)]? /// Separate radius for each border. Doesn't work in this version.
+        /// Radius for all specified borders. Works only for .all.
+        let cornerRadius: (Corner, CGFloat)?
+        /// Separate radius for each border. Doesn't work in this version.
+        let cornerRadiuses: [(Corner, CGFloat)]?
 
+        /**
+         Creates a new button style.
+         */
         public init(backgroundColor: UIColor = .clear,
                     backgroundHighlightedColor: UIColor? = nil,
                     backgroundSelectedColor: UIColor? = nil,
