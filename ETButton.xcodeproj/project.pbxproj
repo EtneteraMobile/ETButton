@@ -32,6 +32,7 @@
 		5275D7E02126F3BC00738282 /* Button+State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5275D7DD2126F3BC00738282 /* Button+State.swift */; };
 		5275D7E12126F3BC00738282 /* Button+State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5275D7DD2126F3BC00738282 /* Button+State.swift */; };
 		5281D3EE21987599002A8864 /* BorderSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5281D3EC2198753F002A8864 /* BorderSnapshotTests.swift */; };
+		5286C0DB21BE75A600EDF982 /* LayoutComputationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5286C0DA21BE75A600EDF982 /* LayoutComputationTests.swift */; };
 		52A35F652132A7FC0037E7D9 /* PositionSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A35F642132A7FC0037E7D9 /* PositionSnapshotTests.swift */; };
 		52A35F662132AA880037E7D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5275D7BD2126BB3C00738282 /* Assets.xcassets */; };
 		52A35F692132F5740037E7D9 /* RoundedCornersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A35F682132F5740037E7D9 /* RoundedCornersVC.swift */; };
@@ -119,6 +120,7 @@
 		5275D7D72126D57200738282 /* Button+StyleSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+StyleSetup.swift"; sourceTree = "<group>"; };
 		5275D7DD2126F3BC00738282 /* Button+State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+State.swift"; sourceTree = "<group>"; };
 		5281D3EC2198753F002A8864 /* BorderSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderSnapshotTests.swift; sourceTree = "<group>"; };
+		5286C0DA21BE75A600EDF982 /* LayoutComputationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutComputationTests.swift; sourceTree = "<group>"; };
 		52A35F642132A7FC0037E7D9 /* PositionSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionSnapshotTests.swift; sourceTree = "<group>"; };
 		52A35F682132F5740037E7D9 /* RoundedCornersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornersVC.swift; sourceTree = "<group>"; };
 		52A35F6A21330D8A0037E7D9 /* CornerRadiusSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadiusSnapshotTests.swift; sourceTree = "<group>"; };
@@ -300,6 +302,7 @@
 				5281D3EC2198753F002A8864 /* BorderSnapshotTests.swift */,
 				52F4C2AA21B8790A004A4685 /* ButtonActionsTests.swift */,
 				52F4C2AC21B8847D004A4685 /* FrameComputationTests.swift */,
+				5286C0DA21BE75A600EDF982 /* LayoutComputationTests.swift */,
 			);
 			name = Tests;
 			path = Tests/ETButtonTests;
@@ -702,6 +705,7 @@
 				52F4C2A821B8733D004A4685 /* Constants.swift in Sources */,
 				52F4C2AD21B8847D004A4685 /* FrameComputationTests.swift in Sources */,
 				8933C7901EB5B82D000D00A4 /* StateSnapshotTests.swift in Sources */,
+				5286C0DB21BE75A600EDF982 /* LayoutComputationTests.swift in Sources */,
 				52A35F6B21330D8A0037E7D9 /* CornerRadiusSnapshotTests.swift in Sources */,
 				52F4C2AB21B8790A004A4685 /* ButtonActionsTests.swift in Sources */,
 				52A35F652132A7FC0037E7D9 /* PositionSnapshotTests.swift in Sources */,

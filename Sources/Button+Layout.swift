@@ -54,7 +54,7 @@ extension Button {
         let rightPadding = contentEdgeInsets.right
 
         let iconWidth: CGFloat = iconImage?.size.width ?? 0
-        let titleWidth: CGFloat = titleLabel?.intrinsicContentSize.width ?? 0
+        let titleWidth: CGFloat = titleLabel!.intrinsicContentSize.width // swiftlint:disable:this force_unwrapping
         let width: CGFloat = leftPadding + iconWidth + space + titleWidth + rightPadding
 
         return CGSize(width: width, height: super.intrinsicContentSize.height)
