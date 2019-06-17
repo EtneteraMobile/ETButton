@@ -58,9 +58,9 @@ public extension Button {
      This struct is used as a part of the button style. It can't be set by itself right now.
      */
     public struct LabelStyle: Equatable {
-        let textColor: UIColor
-        let font: UIFont
-        let lineBreakMode: NSLineBreakMode
+        public var textColor: UIColor
+        public var font: UIFont
+        public var lineBreakMode: NSLineBreakMode
 
         /**
          Creates style of label.
@@ -128,55 +128,55 @@ public extension Button {
         public static let basic = Style(backgroundHighlightedColor: .lightGray)
 
         // Background
-        let backgroundColor: UIColor
-        let backgroundHighlightedColor: UIColor?
-        let backgroundSelectedColor: UIColor?
-        let backgroundDisabledColor: UIColor?
+        public var backgroundColor: UIColor
+        public var backgroundHighlightedColor: UIColor?
+        public var backgroundSelectedColor: UIColor?
+        public var backgroundDisabledColor: UIColor?
 
-        let backgroundView: UIView?
-        let backgroundHighlightedView: UIView?
-        let backgroundSelectedView: UIView?
-        let backgroundDisabledView: UIView?
+        public var backgroundView: UIView?
+        public var backgroundHighlightedView: UIView?
+        public var backgroundSelectedView: UIView?
+        public var backgroundDisabledView: UIView?
 
         // Title
-        let titleStyle: LabelStyle
-        let titleHighlightedStyle: LabelStyle?
-        let titleSelectedStyle: LabelStyle?
-        let titleDisabledStyle: LabelStyle?
+        public var titleStyle: LabelStyle
+        public var titleHighlightedStyle: LabelStyle?
+        public var titleSelectedStyle: LabelStyle?
+        public var titleDisabledStyle: LabelStyle?
 
         // Icon
-        let iconImagePosition: IconImagePosition
+        public var iconImagePosition: IconImagePosition
 
         // Spacing
-        let textIconOffset: CGFloat
+        public var textIconOffset: CGFloat
 
         // Subtitle
-        let subtitleStyle: LabelStyle?
-        let subtitleHighlightedStyle: LabelStyle?
-        let subtitleSelectedStyle: LabelStyle?
-        let subtitleDisabledStyle: LabelStyle?
+        public var subtitleStyle: LabelStyle?
+        public var subtitleHighlightedStyle: LabelStyle?
+        public var subtitleSelectedStyle: LabelStyle?
+        public var subtitleDisabledStyle: LabelStyle?
 
         // Borders
-        let borderWidth: (Edge, CGFloat)? /// Width for all specified borders
-        let borderWidths: [(Edge, CGFloat)]? /// Separate width for each border
+        public var borderWidth: (Edge, CGFloat)? /// Width for all specified borders
+        public var borderWidths: [(Edge, CGFloat)]? /// Separate width for each border
 
-        let borderColor: (Edge, UIColor)? /// Color for all specified borders
-        let borderColors: [(Edge, UIColor)]? /// Separate color for each border
+        public var borderColor: (Edge, UIColor)? /// Color for all specified borders
+        public var borderColors: [(Edge, UIColor)]? /// Separate color for each border
 
-        let borderHighlightedColor: (Edge, UIColor)? /// Color for all specified borders
-        let borderHighlightedColors: [(Edge, UIColor)]? /// Separate color for each border
+        public var borderHighlightedColor: (Edge, UIColor)? /// Color for all specified borders
+        public var borderHighlightedColors: [(Edge, UIColor)]? /// Separate color for each border
 
-        let borderSelectedColor: (Edge, UIColor)? /// Color for all specified borders
-        let borderSelectedColors: [(Edge, UIColor)]? /// Separate color for each border
+        public var borderSelectedColor: (Edge, UIColor)? /// Color for all specified borders
+        public var borderSelectedColors: [(Edge, UIColor)]? /// Separate color for each border
 
-        let borderDisabledColor: (Edge, UIColor)? /// Color for all specified borders
-        let borderDisabledColors: [(Edge, UIColor)]? /// Separate color for each border
+        public var borderDisabledColor: (Edge, UIColor)? /// Color for all specified borders
+        public var borderDisabledColors: [(Edge, UIColor)]? /// Separate color for each border
 
         // Corners
         /// Radius for all specified borders. Works only for .all.
-        let cornerRadius: (Corner, CGFloat)?
+        public var cornerRadius: (Corner, CGFloat)?
         /// Separate radius for each border. Doesn't work in this version.
-        let cornerRadiuses: [(Corner, CGFloat)]?
+        public var cornerRadiuses: [(Corner, CGFloat)]?
 
         /**
          Creates a new button style.
